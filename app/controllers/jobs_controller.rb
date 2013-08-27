@@ -14,17 +14,21 @@ class JobsController < ApplicationController
 
   # GET /jobs/new
   def new
+    @vehicle = Vehicle.find(params[:vehicle_id])
     @job = Job.new
   end
 
   # GET /jobs/1/edit
   def edit
+    @vehicle = Vehicle.find(params[:vehicle_id])
   end
 
   # POST /jobs
   # POST /jobs.json
   def create
-    @job = Job.new(job_params)
+    
+    @vehicle = Vehicle.find(params[:vehicle_id])
+    @job = @vehicle.jobs.new(job_params)
 
     respond_to do |format|
       if @job.save

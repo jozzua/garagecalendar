@@ -15,6 +15,22 @@ p
 p
   strong Odometer:
   = @vehicle.odometer
+ 
+table
+  tr
+    th Name
+    th Odometer
+    th Schedule
+
+  - @vehicle.jobs.each do |job|
+    tr
+      td = link_to job.name, edit_vehicle_job_path(@vehicle, job)
+      td = job.odomoter
+      td = job.date
+ 
+
+= link_to 'New Job', new_vehicle_job_path(@vehicle)
+'|
 
 = link_to 'Edit', edit_vehicle_path(@vehicle)
 '|
