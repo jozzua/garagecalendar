@@ -1,0 +1,27 @@
+h1 Vehicles
+
+table
+  tr
+    th Name
+    th Year
+    th Make
+    th Model
+    th Odometer
+    th
+    th
+    th
+
+  - @vehicles.each do |vehicle|
+    tr
+      td = vehicle.name
+      td = vehicle.year
+      td = vehicle.make
+      td = vehicle.model
+      td = vehicle.odometer
+      td = link_to 'Show', vehicle
+      td = link_to 'Edit', edit_vehicle_path(vehicle)
+      td = link_to 'Destroy', vehicle, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Vehicle', new_vehicle_path

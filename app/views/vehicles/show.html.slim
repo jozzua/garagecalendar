@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @vehicle.name
+p
+  strong Year:
+  = @vehicle.year
+p
+  strong Make:
+  = @vehicle.make
+p
+  strong Model:
+  = @vehicle.model
+p
+  strong Odometer:
+  = @vehicle.odometer
+
+= link_to 'Edit', edit_vehicle_path(@vehicle)
+'|
+= link_to 'Back', vehicles_path
