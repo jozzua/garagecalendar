@@ -1,25 +1,21 @@
 p#notice = notice
 
-p
-  strong Name:
+h4
   = @vehicle.name
-p
-  strong Year:
-  = @vehicle.year
-p
-  strong Make:
-  = @vehicle.make
-p
-  strong Model:
-  = @vehicle.model
-p
-  strong Odometer:
-  = @vehicle.odometer
+= @vehicle.year
+' 
+= @vehicle.make
+' 
+= @vehicle.model
+' 
+br
+= @vehicle.odometer
+'  miles (odometer reading)
  
 table
   tr
     th Name
-    th Odometer
+    th Odometer Target
     th Schedule
 
   - @vehicle.jobs.each do |job|
