@@ -10,6 +10,6 @@ p
   strong Date:
   = @job.date
 
-= link_to 'Edit', edit_job_path(@job)
+= link_to 'Edit', edit_vehicle_job_path(@vehicle, @job)
 '|
-= link_to 'Back', jobs_path
+= link_to 'Back', vehicle_path(@vehicle)
