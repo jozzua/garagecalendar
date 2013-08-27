@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @job.name
+p
+  strong Odomoter:
+  = @job.odomoter
+p
+  strong Date:
+  = @job.date
+
+= link_to 'Edit', edit_job_path(@job)
+'|
+= link_to 'Back', jobs_path
